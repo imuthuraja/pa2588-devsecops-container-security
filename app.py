@@ -4,8 +4,6 @@ from flask import Flask, render_template, request, redirect, url_for
 
 from flask import session as login_session
 
-import requests
-
 app = Flask(__name__)
 app.debug = True
 app.secret_key = 'verysecretkey'
@@ -20,7 +18,7 @@ def default():
 @app.route('/', methods=['GET', 'POST'])
 def login():
     if login_session.get('username') is not None:
-            return redirect(url_for('default'))
+        return redirect(url_for('default'))
     # check if request is valid
     if request.method == 'POST':
         username = request.form['username']
