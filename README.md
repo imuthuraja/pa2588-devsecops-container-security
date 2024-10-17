@@ -5,7 +5,8 @@ You will cover two aspects of container security.
 
 ## Preparation
 
-  1. Fork this repository, and make sure to set the visibility to "Public".
+  1. Click on [**Use this template**](https://github.com/new?template_name=pa2588-devsecops-container-security&template_owner=bth-dipt-teaching)
+     to create a new repository in your GitHub account (don't _fork_ it), and make sure to set the visibility to "Public".
   2. The GitHub actions should run automatically and be green.
 
 ## 1. Scanning the Image
