@@ -56,18 +56,18 @@ jobs:
           tags: ${{ env.TEST_TAG }}
 
       ############## Version 1 ##############
-      #- name: Trivy Scan
-      #  uses: aquasecurity/trivy-action@master
-      #  with:
-      #    image-ref: ${{ env.TEST_TAG }}
-      #    exit-code: 0
-      #    format: 'sarif'
-      #    output: 'trivy-results.sarif'
-      #
-      #- name: Upload SARIF results
-      #  uses: github/codeql-action/upload-sarif@v3
-      #  with:
-      #    sarif_file: trivy-results.sarif
+      - name: Trivy Scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ${{ env.TEST_TAG }}
+          exit-code: 0
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+      
+      - name: Upload SARIF results
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: trivy-results.sarif
       ########################################
           
       - name: Build and push
